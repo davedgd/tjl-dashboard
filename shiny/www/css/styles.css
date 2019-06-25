@@ -1,0 +1,53 @@
+/* title */
+.main-header a {
+    color: white;
+}
+
+.main-header img {
+    margin-bottom: 3px;
+}
+
+#weather-forecast {
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+#weather-forecast thead {
+    text-align: center;
+    font-weight: bold;
+}
+
+#weather {
+    overflow-x: auto;
+}
+
+#weather-forecast td {
+    width: 75px;
+    text-align: center;
+}
+
+.skycon {
+    margin-top: 10px;
+}
+
+.darksky-oneline-logo {
+    text-align: center;
+}
+
+#logout-button {
+    position: absolute;
+    bottom:   0;
+}
+
+.tab-content {
+    display: none;
+}
+
+#sidebarCollapsed {
+    display: none;
+}
+
+/* fix ugly plotly font on zoom out notifications on desktop browsers */
+.plotly-notifier {
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
