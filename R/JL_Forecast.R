@@ -108,7 +108,7 @@ doForecast <- FALSE
 
 if (doForecast) {
 
-  df <- Build_Forecast_DF(Weather_Daily = JL_Weather_Daily, locations = JL_locations %>% filter(name == "The Corner (C'ville)") %>% pull(id))
+  df <- Build_Forecast_DF(Weather_Daily = JL_Weather_Daily, locations = JL_Locations %>% filter(name == "Preston Ave. (C'ville)") %>% pull(id))
   
   m <- Build_Prophet_Model(df)
   
