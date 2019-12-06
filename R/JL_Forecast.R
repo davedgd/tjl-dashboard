@@ -117,7 +117,7 @@ if (doForecast) {
   horizonLength <- 3 * 7
   
   df.cv <- cross_validation(m, initial = nrow(df) - horizonLength - 1, period = nrow(df) - horizonLength, horizon = horizonLength, units = "days")
-  df.cv
+  df.cv %>% as.data.frame()
   
   df.p <- performance_metrics(df.cv, rolling_window = .1)
   df.p

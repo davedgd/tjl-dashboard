@@ -2,7 +2,7 @@
 # Collect Locations
 # -----------------
 
-rawLocations <- FetchLocations()
+rawLocations <- FetchLocations(save = TRUE, trySaved = TRUE)
 JL_Locations <- LocationsDF(rawLocations)
 
 # -------------
@@ -11,12 +11,12 @@ JL_Locations <- LocationsDF(rawLocations)
 
 theLocations <- JL_Locations %>% pull(id)
 
-#theLocation <- JL_Locations %>% filter(name == "The Corner (C'ville)") %>% pull(id)
-theZip <- JL_Locations %>% filter(name == "The Corner (C'ville)") %>% pull(zip)
+#theLocation <- JL_Locations %>% filter(name == "Preston Ave. (C'ville)") %>% pull(id)
+theZip <- JL_Locations %>% filter(name == "Preston Ave. (C'ville)") %>% pull(zip)
 
-endTime <- as_datetime("2019-05-31 00:00:00", tz = "EST5EDT") # Sys.time()
+endTime <- as_datetime("2019-07-25 00:00:00", tz = "EST5EDT") # Sys.time()
 #beginTime <- as_datetime("2019-05-03 00:00:00", tz = "EST5EDT")
-updateTime <- as_datetime("2019-05-31 00:00:00", tz = "EST5EDT") # Sys.time()
+updateTime <- as_datetime("2019-07-25 00:00:00", tz = "EST5EDT") # Sys.time()
 
 numYears <- 2
 

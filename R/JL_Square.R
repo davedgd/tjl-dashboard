@@ -40,12 +40,27 @@ BlankTo <- function(x, to = "NA")
 # Locations
 # ---------
 
-FetchLocations <- function() {
-
-  api_response_locations <- api_instance_locations$list_locations()
-  rawLocations <- api_response_locations$locations
+FetchLocations <- function(save = FALSE, trySaved = FALSE) {
   
-  message(paste("Fetched", length(rawLocations), "locations..."))
+  rawSave <- paste0("cache/locations.pickle")
+  
+  if (trySaved) {
+    
+    rawLocations <- py_load_object(rawSave)
+    
+    message(paste("Loaded", length(rawLocations), "saved locations..."))
+    
+  } else {
+    
+    api_response_locations <- api_instance_locations$list_locations()
+    rawLocations <- api_response_locations$locations
+    
+    if (save)
+      py_save_object(rawLocations, file = rawSave)
+    
+    message(paste("Fetched", length(rawLocations), "locations..."))
+    
+  }
   
   return(rawLocations)
 

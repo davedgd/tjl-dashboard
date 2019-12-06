@@ -2,12 +2,10 @@
 # Installation
 # ------------
 
-doInstall <- F
+doInstall <- FALSE
 
 if (doInstall) {
-  system("pip uninstall squareconnect -y")
-  system("pip install git+https://github.com/davedgd/connect-python-sdk/")
-  
+  system("pip install squareconnect -y")
   devtools::install_github("paulc91/shinyauthr")
 }
 

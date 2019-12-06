@@ -10,6 +10,9 @@
 # ADD A FORECAST WINDOW OF UP TO TWO WEEKS
 # 2.20190612.0 ADDED LAT/LONG TO LOCATION API (STRIP GMAPS FUNCTIONALITY?)
 # AUTO HIDE/SHOW SIDEBAR RELATIVE TO LOGIN AND DISABLE SIDEBAR BUTTON AS NEEDED
+# SEE ?renderTable FOR BETTER CENTERING
+# LOOK INTO ?py_install
+# NEED TO FIX ISSUES WITH LOCATION/ZIP USED FOR FORECASTS (SEE theZip in JL_Data.R)
 
 # ---------------------
 # Set Working Directory
@@ -27,7 +30,7 @@ start <- proc.time() # start clock to measure load time
 doFull <- FALSE
 
 # To try to update, set to TRUE:
-doUpdate <- TRUE
+doUpdate <- FALSE
 
 # To load/reload packages, set to TRUE:
 doLoad <- TRUE
